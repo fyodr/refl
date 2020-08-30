@@ -27,13 +27,13 @@ int main(int argc, char *argv[]) {
         printf("%f\n", R);
 
     } else if (argc == 5) {
-        // four inputs given - last two indices are theta_i and pol
+        // four inputs given - last two inputs are theta_i and pol
         double ni = atof(argv[1]);
         double nt = atof(argv[2]);
         double ti = atof(argv[3])*M_PI/180;
         char pol = argv[4][0];
 
-        if (sin(ti)*ni/nt >= 1.0) {
+        if (sin(ti)*ni >= nt) {
             // total internal reflection
             printf("%f\n", 1.0);
             exit(0);
